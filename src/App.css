@@ -1,0 +1,95 @@
+.display {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  max-height: 80vh;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.gameBoard {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.piece {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border-radius: 2px;
+  background: #000;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.piece.active .inner {
+  transform: rotateY(180deg);
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.6s cubic-bezier(0.38, 0.02, 0.09, 1.66) all;
+}
+
+.piece .front,
+.piece .back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 2px 4px 8px rgb(77, 77, 77);
+}
+
+.piece .front {
+  background: #fff;
+  transform: rotateY(180deg);
+}
+
+.piece .back {
+  background: #414141;
+  color: #d6aeb5;
+  font-size: 100px;
+  transition: 0.3s ease all;
+  overflow: hidden;
+}
+
+.piece .back:hover {
+  background: #ffffff;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.button {
+  min-width: 100px;
+  margin: 10px;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: rgb(78, 78, 78);
+  border: 0px;
+  box-shadow: 2px 2px 2px gray;
+}
